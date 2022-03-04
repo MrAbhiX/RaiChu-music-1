@@ -143,8 +143,8 @@ async def play(c: Client, m: Message):
                       InlineKeyboardButton("⏭️", callback_data="skip"),
                       InlineKeyboardButton("▶️", callback_data="cbresume"),
                   ],[
-                      InlineKeyboardButton("• Group", url=f"https://t.me/kigo_omfo"),
-                      InlineKeyboardButton("• Devloper", url=f"https://t.me/OmFoXD"),
+                      InlineKeyboardButton("• Group", url=f"https://t.me/live_life_like"),
+                      InlineKeyboardButton("• Devloper", url=f"https://t.me/II_ABHIXD_II"),
                   ],[
                       InlineKeyboardButton("🗑", callback_data="cls")],
                   ]
@@ -258,7 +258,7 @@ async def play(c: Client, m: Message):
                       reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("💭 Support", url=f"https://t.me/OmFoXD")
+                            InlineKeyboardButton("💭 Support", url=f"https://t.me/LIVE_LIFE_LIKE")
                         ],
                         [
                             InlineKeyboardButton("🗑 Close", callback_data="cls")
@@ -302,7 +302,7 @@ async def play(c: Client, m: Message):
                     else:
                         try:
                             await suhu.edit(
-                            f"**𝙆𝙄𝙂𝙊 Downloader**\n\n**Title**: {title[:22]}\n\n100% ████████████100%\n\n**Time Taken**: 00:00 Seconds\n\n**Converting Audio[FFmpeg Process]**"
+                            f"**Downloader**\n\n**Title**: {title[:22]}\n\n100% ████████████100%\n\n**Time Taken**: 00:00 Seconds\n\n**Converting Audio[FFmpeg Process]**"
                         )
                             await call_py.join_group_call(
                                 chat_id,
