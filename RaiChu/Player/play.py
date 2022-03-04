@@ -46,18 +46,21 @@ def ytsearch(query: str):
         songname = data["title"]
         url = data["link"]
         duration = data["duration"]
-        thumbnail = data["thumbnails"][0]["url"]
+        thumbnail = f"https://i.ytimg.com/vi/{data['id']}/hqdefault.jpg"
         return [songname, url, duration, thumbnail]
     except Exception as e:
         print(e)
         return 0
 
 
-async def ytdl(format: str, link: str):
-    stdout, stderr = await bash(f'yt-dlp -g -f "best[height<=?720][width<=?1280]" {link}')
+async def ytdl(link: str):
+    stdout, stderr = await bash(
+        f'yt-dlp -g -f "best[height<=?720][width<=?1280]" {link}'
+    )
     if stdout:
         return 1, stdout
     return 0, stderr
+
 
 chat_id = None
 DISABLED_GROUPS = []
